@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Airbnb Clone</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-text">airBnB</span>
+      </div>
+      
+      <div class="search-bar">
+        <button class="search-btn font-bold">Anywhere</button>
+        <span class="divider"></span>
+        <button class="search-btn font-bold">Any week</button>
+        <span class="divider"></span>
+        <button class="search-btn add-guests">Add guests</button>
+        <div class="search-icon">
+          &#128269; </div>
+      </div>
+
+      <div class="user-menu">
+        <div class="host-link">Airbnb your home</div>
+        <div class="profile-dropdown">
+          <span class="menu-icon">&#9776;</span>
+          <span class="avatar-icon">&#128100;</span>
+        </div>
+      </div>
+    </nav>
+
+    <div class="categories">
+      <div class="category active">Islands</div>
+      <div class="category">Beachfront</div>
+      <div class="category">Cabins</div>
+      <div class="category">Amazing pools</div>
+      <div class="category">Castles</div>
+      <div class="category">Mansions</div>
+    </div>
+
+    <div id="root">
+      <main class="listings-grid">
+        <div class="card">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80')">
+            <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">Mombassa,kenya</h3>
+              <span class="rating">&#9733; 4.98</span>
+            </div>
+            <p class="distance">3,402 kilometers away</p>
+            <p class="dates">Oct 15 - 20</p>
+            <p class="price"><span class="font-bold">$450</span> night</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">zanzibar, Tanzania</h3>
+              <span class="rating">&#9733; 5.0</span>
+            </div>
+            <p class="distance">Ocean views</p>
+            <p class="dates">Nov 1 - 7</p>
+            <p class="price"><span class="font-bold">$120</span> night</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">juba, South Sudan</h3>
+              <span class="rating">&#9733; 4.92</span>
+            </div>
+            <p class="distance">Mountain views</p>
+            <p class="dates">Dec 10 - 15</p>
+            <p class="price"><span class="font-bold">$210</span> night</p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">malindi, Kenya</h3>
+              <span class="rating">&#9733; 4.88</span>
+            </div>
+            <p class="distance">Near the beach</p>
+            <p class="dates">Sep 20 - 27</p>
+            <p class="price"><span class="font-bold">$300</span> night</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    </body>
+</html>
