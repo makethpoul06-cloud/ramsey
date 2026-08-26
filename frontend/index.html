@@ -25,9 +25,14 @@
 
       <div class="user-menu">
         <div class="host-link">Airbnb your home</div>
-        <div class="profile-dropdown">
+        <div class="profile-dropdown" role="button" tabindex="0" aria-expanded="false" aria-label="Open profile menu">
           <span class="menu-icon">&#9776;</span>
           <span class="avatar-icon">&#128100;</span>
+          <div class="profile-menu">
+            <button type="button" class="sign-in">Sign in</button>
+            <button type="button" class="sign-up">Sign up</button>
+            <button type="button" class="sign-out">Sign out</button>
+          </div>
         </div>
       </div>
     </nav>
@@ -43,13 +48,14 @@
 
     <div id="root">
       <main class="listings-grid">
-        <div class="card">
+        <!-- Original Cards -->
+        <div class="card" data-category="beachfront">
           <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80')">
             <span class="favorite">&#9825;</span>
           </div>
           <div class="card-info">
             <div class="card-header">
-              <h3 class="location">Mombassa,kenya</h3>
+              <h3 class="location">Mombassa, Kenya</h3>
               <span class="rating">&#9733; 4.98</span>
             </div>
             <p class="distance">3,402 kilometers away</p>
@@ -58,13 +64,13 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="islands beachfront amazing pools">
           <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80')">
              <span class="favorite">&#9825;</span>
           </div>
           <div class="card-info">
             <div class="card-header">
-              <h3 class="location">zanzibar, Tanzania</h3>
+              <h3 class="location">Zanzibar, Tanzania</h3>
               <span class="rating">&#9733; 5.0</span>
             </div>
             <p class="distance">Ocean views</p>
@@ -73,13 +79,13 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-category="cabins">
           <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80')">
              <span class="favorite">&#9825;</span>
           </div>
           <div class="card-info">
             <div class="card-header">
-              <h3 class="location">juba, South Sudan</h3>
+              <h3 class="location">Juba, South Sudan</h3>
               <span class="rating">&#9733; 4.92</span>
             </div>
             <p class="distance">Mountain views</p>
@@ -88,13 +94,13 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" data-category="beachfront">
           <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80')">
              <span class="favorite">&#9825;</span>
           </div>
           <div class="card-info">
             <div class="card-header">
-              <h3 class="location">malindi, Kenya</h3>
+              <h3 class="location">Malindi, Kenya</h3>
               <span class="rating">&#9733; 4.88</span>
             </div>
             <p class="distance">Near the beach</p>
@@ -102,8 +108,175 @@
             <p class="price"><span class="font-bold">$300</span> night</p>
           </div>
         </div>
+
+        <!-- New Added Cards -->
+        <div class="card" data-category="islands beachfront amazing pools">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">Grand Baie, Mauritius</h3>
+              <span class="rating">&#9733; 4.95</span>
+            </div>
+            <p class="distance">Crystal clear lagoons</p>
+            <p class="dates">Jan 10 - 18</p>
+            <p class="price"><span class="font-bold">$380</span> night</p>
+          </div>
+        </div>
+
+        <div class="card" data-category="islands beachfront amazing pools">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">Praslin, Seychelles</h3>
+              <span class="rating">&#9733; 4.99</span>
+            </div>
+            <p class="distance">Island paradise</p>
+            <p class="dates">Feb 2 - 9</p>
+            <p class="price"><span class="font-bold">$510</span> night</p>
+          </div>
+        </div>
+
+        <div class="card" data-category="castles">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">Lalibela, Ethiopia</h3>
+              <span class="rating">&#9733; 4.85</span>
+            </div>
+            <p class="distance">Historic highlands</p>
+            <p class="dates">Mar 12 - 16</p>
+            <p class="price"><span class="font-bold">$180</span> night</p>
+          </div>
+        </div>
+
+        <div class="card" data-category="mansions">
+          <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549473889-14f410d83298?auto=format&fit=crop&w=800&q=80')">
+             <span class="favorite">&#9825;</span>
+          </div>
+          <div class="card-info">
+            <div class="card-header">
+              <h3 class="location">London, United Kingdom</h3>
+              <span class="rating">&#9733; 4.90</span>
+            </div>
+            <p class="distance">Iconic city views</p>
+            <p class="dates">Apr 4 - 11</p>
+            <p class="price"><span class="font-bold">$115</span> night</p>
+          </div>
+        </div>
       </main>
     </div>
     
-    </body>
+    <!-- Tech Stack Rules Footer -->
+    <footer class="tech-stack-footer" style="text-align: center; padding: 2rem; margin-top: 3rem; border-top: 1px solid #ebebeb; color: #717171;">
+      <p style="font-size: 0.9rem; font-weight: 500;">
+       <p> Powered by steve.</p>
+      </p>
+    </footer>
+    <script>
+      const destinationButton = document.querySelector('.search-btn');
+      const destinationPicker = document.createElement('div');
+      const cities = ['Nairobi', 'Mombasa', 'Zanzibar', 'Cape Town', 'Cairo', 'Kigali', 'London', 'Paris', 'Rome', 'Madrid', 'Barcelona', 'Lisbon', 'Berlin', 'Amsterdam', 'Brussels', 'Vienna', 'Prague', 'Budapest', 'Athens', 'Dublin', 'Edinburgh', 'Oslo', 'Stockholm', 'Copenhagen', 'Helsinki', 'Reykjavik', 'Zurich', 'Geneva', 'Milan', 'Venice', 'Florence', 'Munich', 'Cologne', 'Hamburg', 'Warsaw', 'Krakow', 'Bucharest', 'Sofia', 'Belgrade', 'Zagreb', 'Ljubljana', 'Sarajevo', 'Skopje', 'Tirana', 'Tallinn', 'Riga', 'Vilnius', 'Moscow', 'Istanbul', 'Ankara', 'Tbilisi', 'Yerevan', 'Baku', 'Dubai', 'Abu Dhabi', 'Doha', 'Riyadh', 'Jeddah', 'Muscat', 'Kuwait City', 'Manama', 'Amman', 'Beirut', 'Tel Aviv', 'Jerusalem', 'Baghdad', 'Tehran', 'Karachi', 'Lahore', 'Islamabad', 'Mumbai', 'New Delhi', 'Bengaluru', 'Chennai', 'Hyderabad', 'Kolkata', 'Goa', 'Kathmandu', 'Dhaka', 'Colombo', 'Male', 'Yangon', 'Bangkok', 'Chiang Mai', 'Phuket', 'Hanoi', 'Ho Chi Minh City', 'Da Nang', 'Phnom Penh', 'Vientiane', 'Singapore', 'Kuala Lumpur', 'Jakarta', 'Bali', 'Manila', 'Cebu', 'Hong Kong', 'Macau', 'Taipei', 'Seoul', 'Busan', 'Tokyo', 'Osaka', 'Kyoto', 'Beijing', 'Shanghai', 'Guangzhou', 'Shenzhen', 'Ulaanbaatar', 'Perth', 'Sydney', 'Melbourne', 'Brisbane', 'Adelaide', 'Canberra', 'Auckland', 'Wellington', 'Christchurch', 'Suva', 'Papeete', 'Honolulu', 'Anchorage', 'Vancouver', 'Toronto', 'Montreal', 'Ottawa', 'Calgary', 'Edmonton', 'New York', 'Boston', 'Chicago', 'Miami', 'Orlando', 'Atlanta', 'Washington DC', 'Philadelphia', 'Dallas', 'Houston', 'Austin', 'Denver', 'Phoenix', 'Las Vegas', 'Los Angeles', 'San Diego', 'San Francisco', 'Seattle', 'Portland', 'Mexico City', 'Cancun', 'Guadalajara', 'Monterrey', 'Havana', 'Nassau', 'Kingston', 'Santo Domingo', 'San Juan', 'Guatemala City', 'San Salvador', 'Managua', 'San Jose', 'Panama City', 'Bogota', 'Medellin', 'Cartagena', 'Quito', 'Guayaquil', 'Lima', 'Cusco', 'La Paz', 'Santiago', 'Valparaiso', 'Buenos Aires', 'Cordoba', 'Montevideo', 'Asuncion', 'Sao Paulo', 'Rio de Janeiro', 'Brasilia', 'Salvador', 'Caracas', 'Georgetown', 'Paramaribo', 'Castries', 'Bridgetown', 'Port of Spain', 'Marrakesh', 'Casablanca', 'Rabat', 'Algiers', 'Tunis', 'Tripoli', 'Dakar', 'Accra', 'Lagos', 'Abuja', 'Abidjan', 'Kumasi', 'Monrovia', 'Freetown', 'Banjul', 'Conakry', 'Bamako', 'Ouagadougou', 'Niamey', 'Nairobi', 'Mombasa', 'Kampala', 'Kigali', 'Addis Ababa', 'Dar es Salaam', 'Arusha', 'Zanzibar', 'Maputo', 'Harare', 'Lusaka', 'Windhoek', 'Gaborone', 'Johannesburg', 'Durban', 'Pretoria', 'Port Louis', 'Victoria', 'Antananarivo', 'Luanda', 'Kinshasa', 'Brazzaville', 'Khartoum', 'Juba', 'Alexandria', 'Luxor', 'Cape Town'];
+      window.airbnbCities = cities;
+
+      destinationPicker.className = 'city-picker';
+      destinationPicker.setAttribute('role', 'listbox');
+      destinationPicker.innerHTML = cities
+        .map((city) => `<button type="button" class="city-option" role="option">${city}</button>`)
+        .join('');
+      destinationButton.parentElement.classList.add('destination-control');
+      destinationButton.parentElement.append(destinationPicker);
+      destinationButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        document.querySelectorAll('.city-picker').forEach((item) => item.classList.remove('visible'));
+        destinationPicker.classList.toggle('visible');
+      });
+      destinationPicker.querySelectorAll('.city-option').forEach((option) => {
+        option.addEventListener('click', () => {
+          destinationButton.textContent = option.textContent;
+          destinationPicker.classList.remove('visible');
+        });
+      });
+      document.addEventListener('click', () => destinationPicker.classList.remove('visible'));
+
+      const addPicker = (buttonIndex, className, options) => {
+        const button = document.querySelectorAll('.search-btn')[buttonIndex];
+        const picker = document.createElement('div');
+        picker.className = `city-picker ${className}`;
+        picker.setAttribute('role', 'listbox');
+        picker.innerHTML = options
+          .map((option) => `<button type="button" class="city-option" role="option">${option}</button>`)
+          .join('');
+        button.parentElement.classList.add('destination-control');
+        button.parentElement.append(picker);
+        button.addEventListener('click', (event) => {
+          event.stopPropagation();
+          document.querySelectorAll('.city-picker').forEach((item) => item.classList.remove('visible'));
+          picker.classList.toggle('visible');
+        });
+        picker.querySelectorAll('.city-option').forEach((option) => {
+          option.addEventListener('click', () => {
+            button.textContent = option.textContent;
+            picker.classList.remove('visible');
+          });
+        });
+      };
+
+      addPicker(1, 'date-picker', ['Next week', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+      addPicker(2, 'guest-picker', Array.from({ length: 200 }, (_, index) => `${index + 1} guest${index === 0 ? '' : 's'}`));
+      document.addEventListener('click', () => {
+        document.querySelectorAll('.city-picker').forEach((item) => item.classList.remove('visible'));
+      });
+
+      const categoryButtons = document.querySelectorAll('.category');
+      const listingCards = document.querySelectorAll('.card');
+      categoryButtons.forEach((category) => {
+        category.addEventListener('click', () => {
+          const selectedCategory = category.textContent.trim().toLowerCase();
+          categoryButtons.forEach((item) => item.classList.remove('active'));
+          category.classList.add('active');
+          listingCards.forEach((card) => {
+            card.hidden = !card.dataset.category.includes(selectedCategory);
+          });
+        });
+      });
+
+      const profile = document.querySelector('.profile-dropdown');
+      const profileMenu = document.querySelector('.profile-menu');
+      const signIn = document.querySelector('.sign-in');
+      const signOut = document.querySelector('.sign-out');
+      profile.dataset.ready = 'true';
+      profile.addEventListener('click', () => {
+        const isOpen = profile.classList.toggle('open');
+        profile.setAttribute('aria-expanded', String(isOpen));
+      });
+      profile.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          profile.click();
+        }
+      });
+      profileMenu.addEventListener('click', (event) => event.stopPropagation());
+      signIn.addEventListener('click', () => {
+        const email = window.prompt('Enter your email to sign in:');
+        if (email?.trim()) {
+          localStorage.setItem('airbnb-user', email.trim());
+          signIn.textContent = `Signed in as ${email.trim()}`;
+          profile.classList.remove('open');
+        }
+      });
+      signOut.addEventListener('click', () => {
+        localStorage.removeItem('airbnb-user');
+        signIn.textContent = 'Sign in';
+        profile.classList.remove('open');
+        window.alert('You have been signed out.');
+      });
+    </script>
+    <script type="module" src="./script.js"></script>
+  </body>
 </html>
