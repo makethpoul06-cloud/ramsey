@@ -186,7 +186,7 @@
 
       destinationPicker.className = 'city-picker';
       destinationPicker.setAttribute('role', 'listbox');
-      destinationPicker.innerHTML = cities
+      destinationPicker.innerHTML = ['Anywhere', ...cities]
         .map((city) => `<button type="button" class="city-option" role="option">${city}</button>`)
         .join('');
       destinationButton.parentElement.classList.add('destination-control');
@@ -198,13 +198,15 @@
       });
       destinationPicker.querySelectorAll('.city-option').forEach((option) => {
         option.addEventListener('click', () => {
-          destinationButton.textContent = option.textContent;
+          destinationButton.textContent = option.textContent === destinationButton.textContent
+            ? 'Anywhere'
+            : option.textContent;
           destinationPicker.classList.remove('visible');
         });
       });
       document.addEventListener('click', () => destinationPicker.classList.remove('visible'));
 
-      const addPicker = (buttonIndex, className, options) => {
+      const addPicker = (buttonIndex, className, defaultLabel, options) => {
         const button = document.querySelectorAll('.search-btn')[buttonIndex];
         const picker = document.createElement('div');
         picker.className = `city-picker ${className}`;
@@ -221,14 +223,16 @@
         });
         picker.querySelectorAll('.city-option').forEach((option) => {
           option.addEventListener('click', () => {
-            button.textContent = option.textContent;
+            button.textContent = option.textContent === button.textContent
+              ? defaultLabel
+              : option.textContent;
             picker.classList.remove('visible');
           });
         });
       };
 
-      addPicker(1, 'date-picker', ['Next week', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
-      addPicker(2, 'guest-picker', Array.from({ length: 200 }, (_, index) => `${index + 1} guest${index === 0 ? '' : 's'}`));
+      addPicker(1, 'date-picker', 'Any week', ['Any week', 'Next week', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']);
+      addPicker(2, 'guest-picker', 'Add guests', ['Add guests', ...Array.from({ length: 200 }, (_, index) => `${index + 1} guest${index === 0 ? '' : 's'}`)]);
       document.addEventListener('click', () => {
         document.querySelectorAll('.city-picker').forEach((item) => item.classList.remove('visible'));
       });
