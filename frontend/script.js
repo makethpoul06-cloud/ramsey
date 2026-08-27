@@ -38,7 +38,9 @@ if (!existingPicker) {
 if (!existingPicker) {
   destinationPicker.querySelectorAll('.city-option').forEach((option) => {
     option.addEventListener('click', () => {
-      destinationButton.textContent = option.textContent;
+      destinationButton.textContent = option.textContent === destinationButton.textContent
+        ? 'Anywhere'
+        : option.textContent;
       destinationPicker.classList.remove('visible');
     });
   });
